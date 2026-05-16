@@ -13,8 +13,11 @@ Before code edits:
 
 1. Run `chainlink --help`, then `chainlink session status`.
 2. If no session is active: `chainlink session start` and read handoff notes.
-3. If no issue is active: use `chainlink next` for a suggestion and a list of other ready tasks, then choose or create one and set it active.
-4. If lock commands exist: check/claim the lock before editing.
+3. If no issue is active: use `chainlink next` for a suggestion and a list of other ready tasks, then choose or create one and set it active by running `chainlink session work <issue ID>`.
+4. Even if you have been given an issue number, always run `chainlink show <issue ID>` to check its current status before proceeding.
+5. If lock commands exist: check/claim the lock before editing.
+
+**Safety Rule:** You MUST NEVER read the contents of the `.chainlink` directory directly. If you need information about a ticket, run `chainlink show <issue ID>`. If you need information about the current session, run `chainlink session status`.
 
 Baseline flat commands: `chainlink quick|create|subissue|list|show|comment|ready|next|close`, plus `chainlink session start|status|work|action|last-handoff|end`.
 
